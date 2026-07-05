@@ -31,8 +31,16 @@ const init = () => {
     });
     
     const torusKnot = new THREE.Mesh(geometry, material);
-    // Position it to the right side of the screen
-    torusKnot.position.x = window.innerWidth > 768 ? 2.5 : 0;
+    // Position and scale for mobile vs desktop
+    if (window.innerWidth <= 768) {
+        torusKnot.position.x = 0;
+        torusKnot.position.y = 1; // Move up slightly on mobile so it's not hidden behind text
+        torusKnot.scale.set(0.7, 0.7, 0.7);
+    } else {
+        torusKnot.position.x = 2.5;
+        torusKnot.position.y = 0;
+        torusKnot.scale.set(1, 1, 1);
+    }
     scene.add(torusKnot);
     
     // Let's add a particle system around it for extra 'wow' factor
@@ -88,6 +96,14 @@ const init = () => {
         mouseY = (event.clientY - windowHalfY);
     });
     
+    // Touch Events for Mobile Parallax
+    document.addEventListener('touchmove', (event) => {
+        if(event.touches.length > 0) {
+            mouseX = (event.touches[0].clientX - windowHalfX) * 2;
+            mouseY = (event.touches[0].clientY - windowHalfY) * 2;
+        }
+    }, {passive: true});
+    
     // Scroll Event
     let scrollY = window.scrollY;
     
@@ -102,7 +118,15 @@ const init = () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         
         // Update object position based on screen size
-        torusKnot.position.x = window.innerWidth > 768 ? 2.5 : 0;
+        if (window.innerWidth <= 768) {
+            torusKnot.position.x = 0;
+            torusKnot.position.y = 1;
+            torusKnot.scale.set(0.7, 0.7, 0.7);
+        } else {
+            torusKnot.position.x = 2.5;
+            torusKnot.position.y = 0;
+            torusKnot.scale.set(1, 1, 1);
+        }
     });
     
     // 8. Animation Loop

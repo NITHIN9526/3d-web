@@ -313,19 +313,65 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
     .glass-header {
-        padding: 1rem 2rem;
+        padding: 1rem;
+    }
+    .logo {
+        font-size: 1.2rem;
     }
     .nav-links {
         display: none;
     }
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
     .hero {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
+        margin-top: 70px;
+        height: calc(100vh - 70px);
+        text-align: center;
+        align-items: center;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+        max-width: 100%;
     }
     .hero-actions {
         flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    .primary-btn, .secondary-btn {
+        width: 100%;
+    }
+    
+    .content-section {
+        padding: 0 1.5rem;
+        justify-content: center;
+    }
+    .section-text {
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .section-title {
+        font-size: 2rem;
     }
 }
