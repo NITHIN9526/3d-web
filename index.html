@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igloo Inspired | Next Gen Web3D</title>
+    <title>Next Gen Web3D</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -19,14 +19,27 @@
     <!-- UI Overlay -->
     <main class="ui-layer">
         <header class="glass-header">
-            <div class="logo">IGLOO<span class="dot">.</span></div>
+            <div class="logo">WEB<span class="dot">3D</span></div>
             <nav class="nav-links">
                 <a href="#">Products</a>
                 <a href="#">Solutions</a>
                 <a href="#">Company</a>
             </nav>
             <button class="cta-button">Get Started</button>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </header>
+
+        <!-- Mobile Navigation Drawer -->
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+            <a href="#">Products</a>
+            <a href="#">Solutions</a>
+            <a href="#">Company</a>
+            <button class="mobile-cta">Get Started</button>
+        </nav>
 
         <section class="hero">
             <div class="hero-content">
@@ -69,7 +82,7 @@
         </section>
         
         <footer class="glass-footer">
-            <p>&copy; 2026 IGLOO Inspired. Crafted with Web3D.</p>
+            <p>&copy; 2026 Next Gen Web3D. Crafted with Three.js.</p>
         </footer>
     </main>
 
