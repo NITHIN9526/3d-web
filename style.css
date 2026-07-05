@@ -528,3 +528,73 @@ body {
     .secondary-btn:hover,
     .cta-button:hover { transform: none; }
 }
+
+/* ============================================
+   SOUND BUTTON (bottom-left, igloo-style)
+   ============================================ */
+.sound-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    bottom: calc(2rem + env(safe-area-inset-bottom));
+    left:   calc(2rem + env(safe-area-inset-left));
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0.4rem 0;
+    transition: color 0.3s ease;
+    /* prevent tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sound-btn:hover {
+    color: var(--text-primary);
+}
+
+.sound-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.sound-btn:hover .sound-icon {
+    transform: scale(1.1);
+}
+
+/* SVG paths state management */
+/* Default (OFF) — show slash, hide waves */
+.sound-btn .wave   { opacity: 0; transition: opacity 0.3s ease; }
+.sound-btn .slash  { opacity: 1; transition: opacity 0.3s ease; }
+
+/* ON state — show waves, hide slash */
+.sound-btn.sound-on .wave  { opacity: 1; }
+.sound-btn.sound-on .slash { opacity: 0; }
+
+/* Animate wave-2 with slight delay for a pulsing effect */
+.sound-btn.sound-on .wave-1 {
+    animation: wave-pulse 1.8s ease-in-out infinite;
+}
+.sound-btn.sound-on .wave-2 {
+    animation: wave-pulse 1.8s ease-in-out 0.3s infinite;
+}
+
+@keyframes wave-pulse {
+    0%, 100% { opacity: 0.5; }
+    50%       { opacity: 1;   }
+}
+
+.sound-label {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    user-select: none;
+}
+

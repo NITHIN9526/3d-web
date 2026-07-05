@@ -79,8 +79,23 @@
         </footer>
     </main>
 
+    <!-- Sound Toggle Button -->
+    <button class="sound-btn" id="sound-btn" aria-label="Toggle sound" aria-pressed="false">
+        <svg class="sound-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Speaker body -->
+            <path class="speaker-body" d="M3 9H7L12 4V20L7 15H3V9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Sound waves (shown when ON) -->
+            <path class="wave wave-1" d="M15.5 8.5C16.8 9.8 16.8 14.2 15.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path class="wave wave-2" d="M18.5 6C20.8 8.3 20.8 15.7 18.5 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- X slash (shown when OFF) -->
+            <path class="slash" d="M15 9L21 15M21 9L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="sound-label">Sound Off</span>
+    </button>
+
     <!-- Three.js (cdnjs) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
+    <script src="sound.js"></script>
 </body>
 </html>
