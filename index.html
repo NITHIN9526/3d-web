@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igloo Inspired | Next Gen Web3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Gradient -->
+    <div class="bg-gradient"></div>
+
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- UI Overlay -->
+    <main class="ui-layer">
+        <header class="glass-header">
+            <div class="logo">IGLOO<span class="dot">.</span></div>
+            <nav class="nav-links">
+                <a href="#">Products</a>
+                <a href="#">Solutions</a>
+                <a href="#">Company</a>
+            </nav>
+            <button class="cta-button">Get Started</button>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">Introducing Web3D</span>
+                <h1 class="hero-title">Shaping the <br><span class="gradient-text">Digital Frontier</span></h1>
+                <p class="hero-subtitle">
+                    Immersive experiences built for the modern web. We blend aesthetic design with interactive 3D graphics to create memorable digital journeys.
+                </p>
+                <div class="hero-actions">
+                    <button class="primary-btn">Explore Now</button>
+                    <button class="secondary-btn">View Demo</button>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span>Scroll to discover</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Scrollable Sections -->
+        <section class="content-section align-right">
+            <div class="section-text">
+                <h2 class="section-title">Interactive <br><span class="gradient-text">Dimensions</span></h2>
+                <p class="section-description">
+                    Break free from the flat web. Our 3D integrated layouts respond to your every scroll and interaction, bringing static content to life with fluid, hardware-accelerated motion.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section align-left">
+            <div class="section-text">
+                <h2 class="section-title">Next-Gen <br><span class="gradient-text">Performance</span></h2>
+                <p class="section-description">
+                    Built on WebGL and Three.js, delivering buttery smooth 60fps animations across devices without compromising battery life or load times.
+                </p>
+            </div>
+        </section>
+        
+        <footer class="glass-footer">
+            <p>&copy; 2026 IGLOO Inspired. Crafted with Web3D.</p>
+        </footer>
+    </main>
+
+    <!-- Three.js (cdnjs) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
